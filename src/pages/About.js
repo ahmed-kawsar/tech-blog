@@ -14,14 +14,9 @@ const About = () => {
       </div>
       <p className='mt-3 text-slate-100'>
         This blog application is created with reactjs and it is a frontend
-        application.
-      </p>
-      <p className='mt-1 text-slate-100'>
-        This is interactive. It has create, read, update and delete features. It
-        has also search features.
-      </p>
-      <p className='mt-1 text-slate-100'>
-        This application is fully single page application.
+        application. This is interactive. It has create, read, update and delete
+        features. It has also search features. This application is fully single
+        page application.
       </p>
     </main>
   )
