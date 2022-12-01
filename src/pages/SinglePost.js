@@ -5,7 +5,7 @@ const SinglePost = ({ posts, handleDelete }) => {
   const { id } = useParams()
   const post = posts.find((post) => post.id.toString() === id)
   return (
-    <main className='h-full'>
+    <main className='h-full flex overflow-y-auto'>
       <section className='p-3'>
         <article>
           <div className='flex justify-between items-center'>
@@ -24,9 +24,11 @@ const SinglePost = ({ posts, handleDelete }) => {
           </p>
           <p className='text-slate-200'>{post.body}</p>
           <div className='mt-5 flex gap-2'>
-            <button className='bg-slate-400 hover:bg-slate-500 px-2'>
-              edit
-            </button>
+            <Link to={`../edit/${post.id}`}>
+              <button className='bg-slate-400 hover:bg-slate-500 px-2'>
+                edit
+              </button>
+            </Link>
             <button
               className='bg-orange-400 hover:bg-orange-500 px-2'
               onClick={() => handleDelete(post.id)}
